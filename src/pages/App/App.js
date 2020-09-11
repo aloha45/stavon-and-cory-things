@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 import './App.css';
 import BensThings from '../BensThings/BensThings'
+import StavonsThings from '../StavonsThings/StavonsThings'
 import CorysThings from '../CorysThings/CorysThings'
 
 class App extends Component {
@@ -73,6 +74,28 @@ class App extends Component {
         attributes: ["makes you live a long time", "consistent poops", "probably tacos sometimes!", "farm to market"], 
       },
     ],
+    stavonsThings: [
+      {
+        name: "Pumpkin Spice Latte",
+        image: "https://www.zliving.com/wp-content/uploads/2018/08/pumpkinspicelatte.jpg",
+        attributes: ["delicious", "nectar of life", "much pumpkin", "PSL is life"]
+      },
+      {
+        name: "Corgis",
+        image: "https://www.sadanduseless.com/wp-content/uploads/2019/05/funny-corgi-butts1.jpg",
+        attributes: ["corgi butts", "sploots", "good cuddles", "tiny legs"]
+      },
+      {
+        name: "Pokemon",
+        image: "https://cdn.vox-cdn.com/thumbor/e4KRzS--UsuixA2G8TOCwJ-O024=/1400x1050/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/6839749/pokemon.0.png",
+        attributes: ["cute", "tiny monsters", "evolutions are cool", "poor ditto"]
+      },
+      {
+        name: "My Kids",
+        image: "https://scontent-bos3-1.xx.fbcdn.net/v/t1.0-9/118678841_10157755713046492_9194228053365344161_o.jpg?_nc_cat=111&_nc_sid=84a396&_nc_ohc=XFHvyu1MUEYAX-VXkic&_nc_ht=scontent-bos3-1.xx&oh=f0f99c18307ac8853668b56df968c44f&oe=5F7FDF71",
+        attributes: ["cute", "tiny monsters", "can be trained", "mini copies of me"]
+      }
+    ],
     corysThings: [
       { 
         name: 'survivor',
@@ -108,7 +131,9 @@ class App extends Component {
               <h2>All-The-Things</h2>
               <a href="/themanliestthings">Ben's Things</a> 
               <br></br>
-              <a href="/corysthings">Cory's Things</a> 
+              <a href="/corysthings">Cory's Things</a>
+              <br></br>
+              <a href="/stavonsthings">Stavon's Things</a> 
             </>
           }
         />
@@ -124,12 +149,18 @@ class App extends Component {
           exact path='/corysthings'
           render={() => 
             <CorysThings 
-              CorysThings={this.state.corysThings}
+              corysThings={this.state.corysThings}
             />
         }/>
-      </>
-      
-    );
+        <Route 
+          exact path='/stavonsthings'
+          render={() => 
+            <StavonsThings 
+              stavonsThings={this.state.stavonsThings}
+            />
+        }/>
+        </>
+        );
   }
 }
  
