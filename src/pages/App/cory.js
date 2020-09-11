@@ -11,7 +11,7 @@ CorysThings: [
     },
     {
       name: 'JT',
-      image: 'https://imgur.com/wrvZlue',
+      image: 'https://i.imgur.com/zlFVW4w.jpg',
       attributes: ['loyal', 'brave', 'true', 'scared of water']
     },
     {

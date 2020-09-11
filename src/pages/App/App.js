@@ -109,7 +109,7 @@ class App extends Component {
       },
       {
         name: 'JT',
-        image: 'https://imgur.com/wrvZlue',
+        image: 'https://imgur.com/zlFVW4w',
         attributes: ['loyal', 'brave', 'true', 'scared of water']
       },
       {
