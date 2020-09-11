@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 import './App.css';
 import BensThings from '../BensThings/BensThings'
+import CorysThings from '../CorysThings/CorysThings'
 
 class App extends Component {
   state = { 
@@ -71,6 +72,29 @@ class App extends Component {
         image: "https://i.imgur.com/gRxOxsA.jpg", 
         attributes: ["makes you live a long time", "consistent poops", "probably tacos sometimes!", "farm to market"], 
       },
+    ],
+    corysThings: [
+      { 
+        name: 'survivor',
+        image: 'https://u.cubeupload.com/cagayangifs/oBWfZT.gif',
+        attributes: ['strategy', 'camping not glamping', 'the social game', '#blindside']
+      },
+      {
+        name: 'superman',
+        image: 'https://media0.giphy.com/media/10bKPDUM5H7m7u/giphy.gif',
+        attributes: ['faster than a speeding bullet', 'stronger than a locamotive', 'immigrants get the job done', 'underwear outside']
+      },
+      {
+        name: 'JT',
+        image: 'https://imgur.com/wrvZlue',
+        attributes: ['loyal', 'brave', 'true', 'scared of water']
+      },
+      {
+        name: 'riesling',
+        image: 'https://media.winefolly.com/Riesling-wine-tasting-WineFolly.jpg',
+        attributes: ["Prädikat homey", "ever been to alscace?", "enjoy with carrots", "such tipsy"] 
+      },
+  
     ] 
   } 
   render() {
@@ -83,6 +107,8 @@ class App extends Component {
               {/* All the <a> tags should live here */}
               <h2>All-The-Things</h2>
               <a href="/themanliestthings">Ben's Things</a> 
+              <br></br>
+              <a href="/corysthings">Cory's Things</a> 
             </>
           }
         />
@@ -92,6 +118,13 @@ class App extends Component {
           render={() => 
             <BensThings 
               bensThings={this.state.bensThings}
+            />
+        }/>
+        <Route 
+          exact path='/corysthings'
+          render={() => 
+            <CorysThings 
+              CorysThings={this.state.corysThings}
             />
         }/>
       </>
