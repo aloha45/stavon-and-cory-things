@@ -95,7 +95,7 @@ class App extends Component {
         image: "https://scontent-bos3-1.xx.fbcdn.net/v/t1.0-9/118678841_10157755713046492_9194228053365344161_o.jpg?_nc_cat=111&_nc_sid=84a396&_nc_ohc=XFHvyu1MUEYAX-VXkic&_nc_ht=scontent-bos3-1.xx&oh=f0f99c18307ac8853668b56df968c44f&oe=5F7FDF71",
         attributes: ["cute", "tiny monsters", "can be trained", "mini copies of me"]
       }
-    ]
+    ],
     corysThings: [
       { 
         name: 'survivor',
@@ -146,18 +146,21 @@ class App extends Component {
             />
         }/>
         <Route 
+          exact path='/corysthings'
+          render={() => 
+            <CorysThings 
+              corysThings={this.state.corysThings}
+            />
+        }/>
+        <Route 
           exact path='/stavonsthings'
           render={() => 
             <StavonsThings 
               stavonsThings={this.state.stavonsThings}
-          exact path='/corysthings'
-          render={() => 
-            <CorysThings 
-              CorysThings={this.state.corysThings}
             />
         }/>
         </>
-      );
+        );
   }
 }
  

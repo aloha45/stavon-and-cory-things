@@ -1,7 +1,7 @@
 import React from 'react';
 import StavonThing from '../../components/StavonThing/StavonThing'
 
-const StavonThings = (props) => {
+const StavonsThings = (props) => {
   return ( 
     <>
       <h1>Stavon's Things</h1>
